@@ -11,16 +11,17 @@
 			margin-top:0;
 		}
 	</style>
-	<script type="text/javascript" src="paddle.js"></script>
-	<script type="text/javascript" src="ball.js"></script>
-	<script type="text/javascript" src="block.js"></script>
-	<script type="text/javascript" src="collined.js"></script>
-	<script type="text/javascript" src="mainGame.js"></script>
-	<script type="text/javascript" src="levels.js"></script>
-	<script type="text/javascript" src="initScene.js"></script>
-	<script type="text/javascript" src="mainScene.js"></script>	
-	<script type="text/javascript" src="titleScene.js"></script>
-	<script type="text/javascript" src="endScene.js"></script>
+	<script type="text/javascript" src="../js/prop/initprop.js"></script>
+	<script type="text/javascript" src="../js/prop/paddle.js"></script>
+	<script type="text/javascript" src="../js/prop/ball.js"></script>
+	<script type="text/javascript" src="../js/prop/block.js"></script>
+	<script type="text/javascript" src="../js/tool/collined.js"></script>
+	<script type="text/javascript" src="../js/game/mainGame.js"></script>
+	<script type="text/javascript" src="../js/checkpoint/levels.js"></script>
+	<script type="text/javascript" src="../js/scene/initScene.js"></script>
+	<script type="text/javascript" src="../js/scene/mainScene.js"></script>	
+	<script type="text/javascript" src="../js/scene/titleScene.js"></script>
+	<script type="text/javascript" src="../js/scene/endScene.js"></script>
 </head>
 <body>
 	<canvas id="canvas" width="500" height="400"></canvas>
@@ -29,15 +30,19 @@
 	</div>
 </body>
 <script type="text/javascript">
-	var e = sel => document.querySelector(sel)
-	var log = console.log.bind(console)
-	//入口
+
+// var e = sel => document.querySelector(sel)
+
+// 打印日志函数
+var log = console.log.bind(console)
+
+//入口
 var __main = function () {
 
 	var images = {
-		ball:'ball.png',
-		paddle:'dang.png',
-		block:'block.png',
+		ball:'../imgs/ball.png',
+		paddle:'../imgs/dang.png',
+		block:'../imgs/block.png',
 	}
 	var game = new guaGame(images,function (g) {
 		var scene = new titleScene(g)
